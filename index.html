@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Krishna!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Arial:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000, #e10600);
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 500px;
+      height: 400px;
+      perspective: 1500px;
+      position: relative;
+    }
+
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .outside, .inside {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(225, 6, 0, 0.5);
+    }
+
+    .outside {
+      background: #111;
+      color: #e10600;
+      border: 3px solid #e10600;
+      text-align: center;
+    }
+
+    .emoji-display {
+      font-size: 5rem;
+      margin: 20px 0;
+      animation: bounce 1s infinite alternate;
+    }
+
+    .inside {
+      background: #000;
+      color: #fff;
+      transform: rotateY(180deg);
+      border: 3px solid #e10600;
+    }
+
+    .inside p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .speedometer {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #222;
+      color: #e10600;
+      border: 2px solid #e10600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem;
+      box-shadow: 0 0 10px rgba(225, 6, 0, 0.5);
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-15px); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(225, 6, 0, 0.5);
+    }
+
+    .spinning-emoji {
+      animation: spin 3s linear infinite;
+      display: inline-block;
+      font-size: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 1.5rem;
+      }
+      .emoji-display {
+        font-size: 3rem;
+      }
+      .inside p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-inner">
+      <div class="outside">
+        <div class="speedometer">13</div>
+        <h1 class="title">HAPPY BIRTHDAY <span class="spinning-emoji">🎂</span> KRISHNA</h1>
+        <div class="emoji-display">🏎️💨</div>
+        <p>Time to race into another amazing year!</p>
+      </div>
+      <div class="inside">
+        <h1 class="title">TO MY DEAR FRIEND <span class="spinning-emoji">♥</span></h1>
+        <p>
+          I wish you a very happy day, my dear friend :))<br>
+          I love you so much, and I wish you all the best in life.<br>
+          I hope we get to meet someday so we can hug and everything —<br>
+          and achieve our dream together. 🏁
+        </p>
+        <div style="margin-top: 20px; font-size: 2rem;">
+          🎉🎈🎁
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
