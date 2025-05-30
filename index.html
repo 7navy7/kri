@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Krishna!</title>
-<p>TO MY CUTIE PIE<span class="spinning-emoji">♥</span></p>
- 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Arial:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -67,7 +65,7 @@
 
     .emoji-display {
       font-size: 5rem;
-      margin: 20px 0;
+      margin: 10px 0;
       animation: bounce 1s infinite alternate;
     }
 
@@ -81,8 +79,9 @@
     .inside p {
       font-size: 1.1rem;
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: #fff;
+      text-align: center;
     }
 
     .speedometer {
@@ -103,6 +102,16 @@
       box-shadow: 0 0 10px rgba(225, 6, 0, 0.5);
     }
 
+    .cutie-pie {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      color: #e10600;
+      margin: 5px 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(225, 6, 0, 0.5);
+    }
+
     @keyframes bounce {
       from { transform: translateY(0); }
       to { transform: translateY(-15px); }
@@ -113,11 +122,17 @@
       100% { transform: rotate(360deg); }
     }
 
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
     .title {
       font-family: 'Orbitron', sans-serif;
       font-size: 2rem;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
       letter-spacing: 2px;
       text-shadow: 0 0 10px rgba(225, 6, 0, 0.5);
     }
@@ -128,9 +143,17 @@
       font-size: 2rem;
     }
 
+    .pulse-emoji {
+      animation: pulse 1.5s infinite;
+      display: inline-block;
+    }
+
     @media (max-width: 600px) {
       .title {
         font-size: 1.5rem;
+      }
+      .cutie-pie {
+        font-size: 1.2rem;
       }
       .emoji-display {
         font-size: 3rem;
@@ -148,18 +171,17 @@
         <div class="speedometer">14</div>
         <h1 class="title">HAPPY BIRTHDAY <span class="spinning-emoji">🎂</span> KRISHNA</h1>
         <div class="emoji-display">🏎️💨</div>
-        <p></p>
+        <div class="cutie-pie">TO MY CUTIE PIE <span class="pulse-emoji">♥</span></div>
       </div>
       <div class="inside">
-      
         <p>
           I wish you a very happy day, my cupcake :))<br>
           I love you so much, and I wish you all the best in life.<br>
           I hope we get to meet someday so we can hug and everything —<br>
-          and achieve our dream of meeting together and throw snowballs at eachother.
-          I can't wait to spend all of our next year together <33 .
+          and achieve our dream of meeting together and throw snowballs at each other.
+          I can't wait to spend all of our next year together <span class="pulse-emoji">♥♥</span>
         </p>
-        <div style="margin-top: 20px; font-size: 2rem;">
+        <div style="margin-top: 15px; font-size: 2rem;">
           🎉🎈🎁
         </div>
       </div>
